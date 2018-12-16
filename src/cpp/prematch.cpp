@@ -6,7 +6,7 @@ void PrematchPrep::run_prematch(){
 bool on_variable = SmartDashboard::GetBoolean("DD/GetBooleanutton 3",false);
 						//     button number,f_speed on(betwen o and 1,percent output) , speed off.
 					  // run_toggle_m(1,       0.3,                                              0)
-if(on_variable==1){}
+if(on_variable==1){
 	drive_toggle_left_enc->   run_toggle_m(1, 0.3, 0);
 //                        in this case 1 is the button, o,3 is the spped, and o is the off speed
 	drive_toggle_right_enc->  run_toggle_m(2, 0.3, 0);
@@ -68,5 +68,6 @@ if(on_variable==1){}
 	if(flipper_toggle_enc->is_toggle_on()==1){
 		std::cout<<"Amps for flippper talon nooenc: "<< flipper_talon_noenc->GetOutputCurrent()<<std::endl;
 		std::cout<<"Voltage for intake talon noenc: "<< flipper_talon_noenc->GetMotorOutputVoltage()<<std::endl;
+}
 }
 }//this is the end parenthesis for the first if statement 
